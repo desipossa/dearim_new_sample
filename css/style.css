@@ -1,3 +1,8 @@
+body {
+    background: #000;
+}
+
+
 #header {
     position: fixed;
     top: 0;
@@ -94,9 +99,7 @@
 
 
 
-#main_visual {
-    background: #000;
-}
+#main_visual {}
 
 #main_visual .main_visual_slide .itm {
     position: relative;
