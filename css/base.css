@@ -24,16 +24,29 @@ body {
     margin: 0 auto;
 }
 
-.default {
-    padding: 8rem 0;
+.ms {
+    /* padding: 8rem 0; */
 }
 
-.default h2 {
+.ms .title {
+    margin: 0 0 4rem 0;
+}
+
+.ms .title h2 {
     font-size: 4rem;
     font-weight: 800;
+    text-align: center;
 }
 
-.default h3 {
+.ms .title p {
+    margin: 1.6rem 0 0 0;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.ms h3 {
     font-size: 3rem;
     line-height: 3.2rem;
     font-weight: 700;
