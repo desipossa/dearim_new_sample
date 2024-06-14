@@ -1,6 +1,9 @@
 $(function () {
 
-    $('#content').fullpage();
+    $('#content').fullpage({
+        responsiveWidth: 1200,
+        responsiveHeight: 700,
+    });
 
     $('#header .utils .lang>a').on('click', function (e) {
         e.preventDefault();
