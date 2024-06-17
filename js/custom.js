@@ -46,7 +46,7 @@ $(function () {
         loop: true,
         on: {
             slideChangeTransitionStart: function () {
-                $('#main_content .line').removeClass('on');
+                $('#main_content .itm01 .line').removeClass('on');
             },
             slideChangeTransitionEnd: function () {
                 $('#main_content .tab_con .itm01 .list li')
@@ -77,12 +77,16 @@ $(function () {
     const mainContentSlide02 = new Swiper('#main_content .tab_slide02', {
         loop: true,
         on: {
+            slideChangeTransitionStart: function () {
+                $('#main_content .itm02 .line').removeClass('on');
+            },
             slideChangeTransitionEnd: function () {
                 $('#main_content .tab_con .itm02 .list li')
                     .eq(this.realIndex)
                     .addClass('on')
                     .siblings()
                     .removeClass('on');
+                $('#main_content .itm02 .line').addClass('on');
             }
         }
     });
