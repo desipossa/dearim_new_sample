@@ -448,3 +448,49 @@
 
     border: 1px solid rgba(255, 255, 255, 0.4);
 }
+
+#main_content {}
+
+#main_content .tab_menu {
+    display: flex;
+    border-bottom: 1px solid var(--primary-color);
+    height: 4.8rem;
+}
+
+#main_content .tab_menu li {
+    border-top: 1px solid var(--line-color);
+    border-left: 1px solid var(--line-color);
+    background: var(--background-color);
+}
+
+#main_content .tab_menu li.on {
+    border-top: 1px solid var(--primary-color);
+    border-left: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+}
+
+#main_content .tab_menu li~li {
+    border-right: 1px solid var(--line-color);
+}
+
+#main_content .tab_menu li.on~li {
+    border-left: 1px solid transparent;
+}
+
+#main_content .tab_menu li button {
+    height: 4.7rem;
+    padding: 0 4rem;
+    background: transparent;
+}
+
+#main_content .tab_menu li.on button {
+    background: var(--white-color);
+}
+
+#main_content .tab_con .itm {
+    display: none;
+}
+
+#main_content .tab_con .itm.on {
+    display: block;
+}

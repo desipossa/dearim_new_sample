@@ -32,6 +32,23 @@ $(function () {
             delay: 4000,
             disableOnInteraction: false,
         },
+    });
+
+
+    $('#main_content .tab_menu li button').on('click', function () {
+        $(this)
+            .parent()
+            .addClass('on')
+            .siblings()
+            .removeClass('on');
+
+        let idx = $(this).parent().index();
+
+        $('#main_content .tab_con .itm')
+            .eq(idx)
+            .addClass('on')
+            .siblings()
+            .removeClass('on')
     })
 
 })
