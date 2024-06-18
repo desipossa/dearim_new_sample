@@ -126,7 +126,7 @@ $(function () {
     });
 
 
-    const palyList = ['cmjEMkJqxTI', 'HcFq9dTlsXE', '8oZ5ia6mRLs', 'rn5sDesgLqg']
+    const palyList = ['cmjEMkJqxTI', 'HcFq9dTlsXE', '8oZ5ia6mRLs', 'rn5sDesgLqg'];
 
     $('#main_promotion .movie').YTPlayer({
         videoURL: 'cmjEMkJqxTI',
@@ -138,6 +138,12 @@ $(function () {
     $('#main_promotion .play_list li button').on('click', function () {
 
         let idx = $(this).parent().index();
+
+        $(this)
+            .parent()
+            .addClass('on')
+            .siblings()
+            .removeClass('on');
 
         $('#main_promotion .movie').YTPlayer({
             videoURL: palyList[idx],
