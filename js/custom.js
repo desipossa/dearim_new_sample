@@ -11,7 +11,7 @@ $(function () {
                 .siblings()
                 .removeClass('on');
 
-            if (idx == 3) {
+            if (idx === 3 || idx === 4) {
                 $('#header').addClass('on');
                 $('#aside').addClass('on');
             } else {
@@ -124,6 +124,31 @@ $(function () {
             .siblings()
             .removeClass('on')
     });
+
+
+    const palyList = ['cmjEMkJqxTI', 'HcFq9dTlsXE', '8oZ5ia6mRLs', 'rn5sDesgLqg']
+
+    $('#main_promotion .movie').YTPlayer({
+        videoURL: 'cmjEMkJqxTI',
+        containment: 'self',
+        optimizeDisplay: false,
+    });
+
+
+    $('#main_promotion .play_list li button').on('click', function () {
+
+        let idx = $(this).parent().index();
+
+        $('#main_promotion .movie').YTPlayer({
+            videoURL: palyList[idx],
+            containment: 'self',
+            optimizeDisplay: false,
+        });
+    })
+
+
+
+
 
 
 
